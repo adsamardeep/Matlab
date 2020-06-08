@@ -1,0 +1,13 @@
+function in=saddle(M)
+[m,n]=size(M);    %%SIZE CALCULATED
+in=[];            %%'in' IS INITIALIZED AS AN EMPTY MATRIX
+for ii=1:m
+    for jj=1:n
+        if (M(ii,jj)==max(M(ii,:))&& M(ii,jj)==min(M(:,jj)))
+            in=[in; ii,jj];     %%INDICES CALCULATION AND STORING TO 'in'
+        end
+    end
+end
+            
+indices=in;       %%FINAL INDICES AS OUTPUT ARGUMENT
+end
